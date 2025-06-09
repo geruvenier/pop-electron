@@ -1,0 +1,38 @@
+{
+  "name": "utn-frvm-electron",
+  "version": "1.0.0",
+  "description": "Aplicación desktop FRVM UTN basada en Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Gerardo Venier",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^24.13.1"
+  },
+  "build": {
+    "appId": "ar.edu.utn.frvm.desktop",
+    "productName": "FRVM Desktop",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.education",
+      "target": [
+        "dmg"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  }
+}
